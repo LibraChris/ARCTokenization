@@ -13,8 +13,14 @@ module ASSMSO =
 
         module ``ASSAY`` =
             let key =  CvTerm.create("ASSMSO:00000002","ASSAY","ASSMSO")
-        
-            let ``Assay File Name`` =  CvTerm.create("ASSMSO:00000019","Assay File Name","ASSMSO")
+            let ``Assay Measurement Type`` =  CvTerm.create("ASSMSO:00000005","Assay Measurement Type","ASSMSO")
+            let ``Assay Measurement Type Term Accession Number`` =  CvTerm.create("ASSMSO:00000006","Assay Measurement Type Term Accession Number","ASSMSO")
+            let ``Assay Measurement Type Term Source REF`` =  CvTerm.create("ASSMSO:00000008","Assay Measurement Type Term Source REF","ASSMSO")  
+            let ``Assay Technology Type`` =  CvTerm.create("ASSMSO:00000011","Assay Technology Type","ASSMSO")
+            let ``Assay Technology Type Term Accession Number`` = CvTerm.create("ASSMSO:00000012","Assay Technology Type Term Accession Number","ASSMSO")   
+            let ``Assay Technology Type Term Source REF`` =CvTerm.create("ASSMSO:00000014","Assay Technology Type Term Source REF","ASSMSO")
+            let ``Assay Technology Platform`` =  CvTerm.create("ASSMSO:00000016","Assay Technology Platform","ASSMSO")
+            let ``Assay File Name`` =  CvTerm.create("ASSMSO:00000018","Assay File Name","ASSMSO")
 
         module ``ASSAY PERFORMERS`` =
             let key =  CvTerm.create("ASSMSO:00000020","ASSAY PERFORMERS","ASSMSO")
