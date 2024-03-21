@@ -58,6 +58,27 @@ module internal FS =
     let internal normalisePath (path:string) =
         path.Replace("\\","/")
 
+    // let rec internal getAllFilesAndDirectories (path: string) =
+    //     let files = 
+    //         System.IO.Directory.GetFiles(path)
+    //         |> Seq.map(fun p -> 
+    //             Tokenization.ArcFileSystem.PType.File,
+    //             p|>normalisePath
+    //         )
+    //     let directories = 
+    //         System.IO.Directory.GetDirectories(path)
+    //         |> Seq.map(fun p -> 
+    //             Tokenization.ArcFileSystem.PType.Directory,
+    //             p|>normalisePath
+    //         )
+    //     seq {
+    //         yield! files
+    //         yield! directories
+    //         for (ptype,directory) in directories do
+    //             yield! getAllFilesAndDirectories directory
+    //     }
+
+
     let tokenizeARCFileSystem (rootPath:string) =
         let rootPathNormalised = rootPath|>normalisePath
         
@@ -74,7 +95,8 @@ module internal FS =
                 Tokenization.ArcFileSystem.PType.File,
                 p|>normalisePath
             )
-        let collection: (Tokenization.ArcFileSystem.PType * string) seq = Seq.concat (seq{directories;files})
+        
+        let collection: (Tokenization.ArcFileSystem.PType * string) seq = Seq.concat(seq{directories;files})//getAllFilesAndDirectories rootPathNormalised
 
         collection
         |>Seq.map(fun (pType,p) ->  ArcFileSystem.getArcFileSystemTokens rootPathNormalised pType p)

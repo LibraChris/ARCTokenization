@@ -34,16 +34,16 @@ def: ""
     relationship: follows ASSMSO:00000002 ! ASSAY
     relationship: follows ASSMSO:00000003 ! ASSAY METADATA
 
-    [Term]
-    id: ASSMSO:00000005
-    name: Measurement Type
-    def: ""
-    synonym: "Assay Measurement Type" EXACT []
-    is_obsolete: true
-    relationship: part_of ASSMSO:00000002 ! ASSAY
-    relationship: part_of ASSMSO:00000003 ! ASSAY METADATA
-    relationship: follows ASSMSO:00000002 ! ASSAY
-    relationship: follows ASSMSO:00000003 ! ASSAY METADATA
+    # [Term]
+    # id: ASSMSO:00000005
+    # name: Measurement Type
+    # def: ""
+    # synonym: "Assay Measurement Type" EXACT []
+    # is_obsolete: true
+    # relationship: part_of ASSMSO:00000002 ! ASSAY
+    # relationship: part_of ASSMSO:00000003 ! ASSAY METADATA
+    # relationship: follows ASSMSO:00000002 ! ASSAY
+    # relationship: follows ASSMSO:00000003 ! ASSAY METADATA
 
     [Term]
     id: ASSMSO:00000006
